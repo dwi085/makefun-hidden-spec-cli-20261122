@@ -589,6 +589,7 @@ function srEdits(lines: string[], strict: boolean): Edit[] {
     const s = i;
     let eq = -1;
     for (let j = s + 1; j < lines.length; j++) {
+      if (lines[j]!.trimEnd() === '>>>>>>> REPLACE') break;
       if (lines[j]!.trimEnd() === '=======') {
         eq = j;
         break;

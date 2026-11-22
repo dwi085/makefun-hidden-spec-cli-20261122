@@ -45,8 +45,10 @@ node main.ts [--format=NAME] [--check] [--strict] [PATCH]
 ## Practice checks
 
 The kit's practice set (100 checks with the house reference's expected
-results) passes 100/100:
+results) passes 100/100. The kit's `check.ts` (from the kit starter) runs
+it against `main.ts` beside it:
 
 ```sh
+cp <kit>/starter/check.ts .
 node check.ts <kit>/program/generator/practice.json
 ```
